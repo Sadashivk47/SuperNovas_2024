@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DTC-Login</title>
+    <link rel="icon" href="https://th.bing.com/th?id=ODLS.a7310774-1d3e-4943-81ad-93e6e7fbba29&w=32&h=32&qlt=90&pcl=fffffa&r=0&o=6&pid=1.2" type="image/icon type">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        .login-container {
+            width: 400px;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .login-container img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .input-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .login-btn {
+            display: block;
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #006400;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .login-btn:hover {
+            background-color: #004d00;
+        }
+
+        .login-footer {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .login-footer a {
+            color: #005064;
+            text-decoration: none;
+        }
+
+        .login-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <img src="img/dtc_logo_2.png" alt="DTC Logo">
+        <h2>Login to DTC System</h2>
+
+        <form action="dashboard.html" method="POST">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            
+            
+            
+        </form>
+        <a class="ref" href="home.html">
+            <button class="login-btn">Login</button>
+            </a>
+
+        <div class="login-footer">
+            <p>Forgot your password? <a href="#">Click here</a></p>
+            <!--<p>Not a member? <a href="#">Sign up now</a></p>-->
+        </div>
+    </div>
+
+</body>
+</html>

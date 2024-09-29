@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- My CSS -->
+	<link rel="stylesheet" href="style.css">
+
+	<title>DTC-Reports</title>
+    <link rel="icon" href="https://th.bing.com/th?id=ODLS.a7310774-1d3e-4943-81ad-93e6e7fbba29&w=32&h=32&qlt=90&pcl=fffffa&r=0&o=6&pid=1.2" type="image/icon type">
+	<header>
+		<div class="view-content">
+			<div class="item-list">
+				<ul>
+					<li>
+						<img src="img/fulllogo.png" alt="Delhi Transport Corporation" style="float: right;">
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</header>
+</head>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        canvas {
+            max-width: 600px;
+            margin: auto;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+
+<title>Maintenance Report</title>
+<style>
+	body {
+		font-family: Arial, sans-serif;
+		background-color: #f4f4f4;
+		margin: 0;
+		padding: 20px;
+	}
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		margin: auto;
+		background-color: #fff;
+	}
+	th, td {
+		padding: 10px;
+		text-align: left;
+		border: 1px solid #ddd;
+	}
+	th {
+		background-color: #4CAF50;
+		color: white;
+	}
+	h1 {
+		text-align: center;
+	}
+</style>
+
+<title>On-Time Performance Analysis - Line Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        canvas {
+            max-width: 600px;
+            margin: auto;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+	<title>Crew Utilization Analysis - Stacked Bar Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        canvas {
+            max-width: 600px;
+            margin: auto;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+	<title>Route Efficiency Analysis - Bar Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        canvas {
+            max-width: 600px;
+            margin: auto;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			
+			<img src="img/dtc_logo_2.png" alt="dtclogo">
+			<span class="text" style="color: black;">DTC</span>
+		</a>
+		<ul class="side-menu top">
+			
+			<li class="active">
+				<a href="home.html">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Home</span>
+				</a>
+			</li>
+			<li>
+				<a href="crew.html">
+					<i class='bx bxs-group' ></i>
+					<span class="text">Crew Management</span>
+				</a>
+			</li>
+			<li>
+				<a href="linked.html">
+					<i class='bx bxs-shopping-bag-alt' ></i>
+					<span class="text">Linked Crew Management</span>
+				</a>
+			</li>
+			<li>
+				<a href="unlinked.html">
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">Unlinked Crew Management</span>
+				</a>
+			</li>
+			<li>
+				<a href="route.html">
+					<i class='bx bxs-map' ></i>
+					<span class="text">Route Management</span>
+				</a>
+			</li>
+			<li>
+				<a href="reports.html">
+					<i class='bx bxs-bar-chart-alt-2' ></i>
+					<span class="text">Reports And Analytics</span>
+				</a>
+			</li>
+			<li>
+				<a href="emergency.html">
+					<i class='bx bxs-alarm' ></i>
+					<span class="text">Emergency Response System</span>
+				</a>
+			</li>
+			
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="#">
+					<i class='bx bxs-cog' ></i>
+					<span class="text">Settings</span>
+				</a>
+			</li>
+			<li>
+				<a href="login.html" class="logout">
+					<i class='bx bxs-log-out-circle'></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<a href="#" class="nav-link"></a>
+			<form action="#">
+				<!--<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div> -->
+			</form>
+			
+			
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>Reports And Data Analytics</h1>
+					<ul class="breadcrumb">
+						
+					</ul>
+				</div>
+				
+			</div>
+			<div class="chart">
+				<body>
+					<h1>Bus Utilization Report</h1>
+					<canvas id="busUtilizationChart"></canvas>
+				
+					<script>
+						const cty = document.getElementById('busUtilizationChart').getContext('2d');
+						const busUtilizationChart = new Chart(cty, {
+							type: 'pie',
+							data: {
+								labels: ['Active Buses', 'Inactive Buses'],
+								datasets: [{
+									label: 'Bus Utilization',
+									data: [120, 30], // Active and Inactive Bus Numbers
+									backgroundColor: [
+										'rgba(75, 192, 192, 0.6)', // Active Buses Color
+										'rgba(255, 99, 132, 0.6)'  // Inactive Buses Color
+									],
+									borderColor: [
+										'rgba(75, 192, 192, 1)',
+										'rgba(255, 99, 132, 1)'
+									],
+									borderWidth: 1
+								}]
+							},
+							options: {
+								responsive: true,
+								plugins: {
+									legend: {
+										display: true,
+										position: 'top'
+									},
+									title: {
+										display: true,
+										text: 'Bus Utilization Report'
+									}
+								}
+							}
+						});
+					</script>
+				
+			</div>
+			<br>
+			<br>
+			<br>
+
+			<h1>Bus Maintenance Report</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Bus ID</th>
+                <th>Last Maintenance Date</th>
+                <th>Maintenance Type</th>
+                <th>Next Due Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>001</td>
+                <td>2024-09-01</td>
+                <td>Engine Check</td>
+                <td>2024-12-01</td>
+                <td>Completed</td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>2024-08-15</td>
+                <td>Tire Replacement</td>
+                <td>2024-11-15</td>
+                <td>Pending</td>
+            </tr>
+            <tr>
+                <td>003</td>
+                <td>2024-09-10</td>
+                <td>Oil Change</td>
+                <td>2024-12-10</td>
+                <td>Completed</td>
+            </tr>
+            <tr>
+                <td>004</td>
+                <td>2024-07-20</td>
+                <td>Brake Inspection</td>
+                <td>2024-10-20</td>
+                <td>In Progress</td>
+            </tr>
+            <tr>
+                <td>005</td>
+                <td>2024-08-30</td>
+                <td>General Service</td>
+                <td>2024-11-30</td>
+                <td>Pending</td>
+            </tr>
+        </tbody>
+    </table>
+	 <br> 
+	 <br>
+	 <br>
+	 
+	<h1>On-Time Performance Analysis</h1>
+    <canvas id="onTimePerformanceChart"></canvas>
+
+    <script>
+        const ctxx = document.getElementById('onTimePerformanceChart').getContext('2d');
+        const onTimePerformanceChart = new Chart(ctxx, {
+            type: 'line',
+            data: {
+                labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'], // Replace with actual time periods
+                datasets: [{
+                    label: 'On-Time Percentage',
+                    data: [95, 90, 92, 88], // Replace with actual on-time performance data
+                    fill: false,
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    tension: 0.1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'On-Time Percentage (%)'
+                        }
+                    }
+                },
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top'
+                    },
+                    title: {
+                        display: true,
+                        text: 'On-Time Performance Analysis'
+                    }
+                }
+            }
+        });
+    </script>
+	<br>
+	<br>
+	<br>
+	<h1>Crew Utilization Analysis</h1>
+    <canvas id="crewUtilizationChart"></canvas>
+
+    <script>
+        const ctx = document.getElementById('crewUtilizationChart').getContext('2d');
+        const crewUtilizationChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Crew A', 'Crew B', 'Crew C'], // Replace with actual crew names
+                datasets: [
+                    {
+                        label: 'Active Hours',
+                        data: [30, 25, 35], // Replace with actual active hours
+                        backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                    },
+                    {
+                        label: 'Rest Hours',
+                        data: [10, 10, 15], // Replace with actual rest hours
+                        backgroundColor: 'rgba(255, 99, 132, 0.6)',
+                    },
+                    {
+                        label: 'Training Hours',
+                        data: [5, 5, 5], // Replace with actual training hours
+                        backgroundColor: 'rgba(153, 102, 255, 0.6)',
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Hours'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top'
+                    },
+                    title: {
+                        display: true,
+                        text: 'Crew Utilization Analysis - Stacked Bar Chart'
+                    }
+                }
+            }
+        });
+    </script>
+	<br>
+	<br>
+	<br>
+	<h1>Route Efficiency Analysis</h1>
+    <canvas id="routeEfficiencyChart"></canvas>
+
+    <script>
+        const ctz = document.getElementById('routeEfficiencyChart').getContext('2d');
+        const routeEfficiencyChart = new Chart(ctz, {
+            type: 'bar',
+            data: {
+                labels: ['Route A', 'Route B', 'Route C'], // Replace with actual route names
+                datasets: [{
+                    label: 'Average Travel Time (mins)',
+                    data: [30, 25, 45], // Replace with actual average travel times
+                    backgroundColor: [
+                        'rgba(75, 192, 192, 0.6)', // Route A Color
+                        'rgba(153, 102, 255, 0.6)', // Route B Color
+                        'rgba(255, 99, 132, 0.6)'  // Route C Color
+                    ],
+                    borderColor: [
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 99, 132, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Average Travel Time (mins)'
+                        }
+                    }
+                },
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top'
+                    },
+                    title: {
+                        display: true,
+                        text: 'Route Efficiency Analysis'
+                    }
+                }
+            }
+        });
+    </script>
+
+
+
+
+
+			
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+	
+
+	<script src="script.js"></script>
+</body>
+</html>

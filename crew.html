@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- My CSS -->
+	<link rel="stylesheet" href="style.css">
+
+	<title>DTC</title>
+	<link rel="icon" href="https://th.bing.com/th?id=ODLS.a7310774-1d3e-4943-81ad-93e6e7fbba29&w=32&h=32&qlt=90&pcl=fffffa&r=0&o=6&pid=1.2" type="image/icon type">
+	<header>
+		<div class="view-content">
+			<div class="item-list">
+				<ul>
+					<li>
+						<img src="img/fulllogo.png" alt="Delhi Transport Corporation" style="float: right;">
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</header>
+</head>
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			
+			<img src="img/dtc_logo_2.png" alt="dtclogo">
+			<span class="text" style="color: black;">DTC</span>
+		</a>
+		<ul class="side-menu top">
+			
+			<li class="active">
+				<a href="home.html">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Home</span>
+				</a>
+			</li>
+			<li>
+				<a href="crew.html">
+					<i class='bx bxs-group' ></i>
+					<span class="text">Crew Management</span>
+				</a>
+			</li>
+			<li>
+				<a href="linked.html">
+					<i class='bx bxs-shopping-bag-alt' ></i>
+					<span class="text">Linked Crew Management</span>
+				</a>
+			</li>
+			<li>
+				<a href="unlinked.html">
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">Unlinked Crew Management</span>
+				</a>
+			</li>
+			<li>
+				<a href="route.html">
+					<i class='bx bxs-map' ></i>
+					<span class="text">Route Management</span>
+				</a>
+			</li>
+			<li>
+				<a href="reports.html">
+					<i class='bx bxs-bar-chart-alt-2' ></i>
+					<span class="text">Reports And Analytics</span>
+				</a>
+			</li>
+			<li>
+				<a href="emergency.html">
+					<i class='bx bxs-alarm' ></i>
+					<span class="text">Emergency Response System</span>
+				</a>
+			</li>
+			
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="#">
+					<i class='bx bxs-cog' ></i>
+					<span class="text">Settings</span>
+				</a>
+			</li>
+			<li>
+				<a href="login.html" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<a href="#" class="nav-link"></a>
+			<form action="#">
+				<!--<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div> -->
+			</form>
+			
+			
+		</nav>
+		<!-- NAVBAR -->
+
+
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>Crew Management</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="crew.html"></a>
+						</li>
+						
+						<li>
+							<a class="active" href="#"></a>
+						</li>
+					</ul>
+				</div>
+				<!--<a href="#" class="btn-download">
+					<i class='bx bxs-cloud-download' ></i>
+					<span class="text">Download PDF</span>
+				</a> -->
+			</div>
+			<h1>Crew Management System</h1>
+    <link href="crew.css" rel="stylesheet">
+
+    <div class="container">
+        <h2>Crew Members</h2>
+        <table id="crewTable">
+            <thead>
+                <tr>
+                    <th>Crew ID</th>
+                    <th>Name</th>
+                    <th>Bus No</th>
+                    <th>Route Travelling</th>
+                    <th>Status</th>
+                    <th>Assign/Change Bus</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dynamic Rows -->
+                <tr>
+                    <td>001</td>
+                    <td>John Doe</td>
+                    <td id="busNo-001">102</td>
+                    <td>Route A</td>
+                    <td><span id="status-001" class="status active">Active</span></td>
+                    <td>
+                        <select onchange="assignBus('001', this)">
+                            <option value="102">Bus 102</option>
+                            <option value="203">Bus 203</option>
+                            <option value="305">Bus 305</option>
+                            <option value="407">Bus 407</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>Jane Smith</td>
+                    <td id="busNo-002">203</td>
+                    <td>Route B</td>
+                    <td><span id="status-002" class="status inactive">Inactive</span></td>
+                    <td>
+                        <select onchange="assignBus('002', this)">
+                            <option value="102">Bus 102</option>
+                            <option value="203">Bus 203</option>
+                            <option value="305">Bus 305</option>
+                            <option value="407">Bus 407</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>003</td>
+                    <td>Michael Brown</td>
+                    <td id="busNo-003">305</td>
+                    <td>Route C</td>
+                    <td><span id="status-003" class="status active">Active</span></td>
+                    <td>
+                        <select onchange="assignBus('003', this)">
+                            <option value="102">Bus 102</option>
+                            <option value="203">Bus 203</option>
+                            <option value="305">Bus 305</option>
+                            <option value="407">Bus 407</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>004</td>
+                    <td>Emily Davis</td>
+                    <td id="busNo-004">407</td>
+                    <td>Route D</td>
+                    <td><span id="status-004" class="status inactive">Inactive</span></td>
+                    <td>
+                        <select onchange="assignBus('004', this)">
+                            <option value="102">Bus 102</option>
+                            <option value="203">Bus 203</option>
+                            <option value="305">Bus 305</option>
+                            <option value="407">Bus 407</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Add New Crew</h2>
+        <form id="addCrewForm">
+            <div class="form-group">
+                <label for="crew-id">Crew ID:</label>
+                <input type="text" id="crew-id" name="crew-id" required>
+            </div>
+            <div class="form-group">
+                <label for="crew-name">Name:</label>
+                <input type="text" id="crew-name" name="crew-name" required>
+            </div>
+            <div class="form-group">
+                <label for="bus-no">Bus No:</label>
+                <input type="text" id="bus-no" name="bus-no" required>
+            </div>
+            <div class="form-group">
+                <label for="route">Route Travelling:</label>
+                <input type="text" id="route" name="route" required>
+            </div>
+            <div class="form-group">
+                <label for="status">Status:</label>
+                <select id="status" name="status">
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                </select>
+            </div>
+            <input type="submit" value="Add Crew">
+        </form>
+    </div>
+
+    <script>
+        // Function to assign bus in real-time
+        function assignBus(crewId, element) {
+            document.getElementById('busNo-' + crewId).textContent = element.value;
+        }
+
+        // Handle the form submission for adding new crew members
+        document.getElementById('addCrewForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Get form values
+            const crewId = document.getElementById('crew-id').value;
+            const crewName = document.getElementById('crew-name').value;
+            const busNo = document.getElementById('bus-no').value;
+            const route = document.getElementById('route').value;
+            const status = document.getElementById('status').value;
+
+            // Create a new row dynamically
+            const newRow = `
+                <tr>
+                    <td>${crewId}</td>
+                    <td>${crewName}</td>
+                    <td id="busNo-${crewId}">${busNo}</td>
+                    <td>${route}</td>
+                    <td><span id="status-${crewId}" class="status ${status === 'active' ? 'active' : 'inactive'}">${status.charAt(0).toUpperCase() + status.slice(1)}</span></td>
+                    <td>
+                        <select onchange="assignBus('${crewId}', this)">
+                            <option value="${busNo}">${busNo}</option>
+                            <option value="102">Bus 102</option>
+                            <option value="203">Bus 203</option>
+                            <option value="305">Bus 305</option>
+                            <option value="407">Bus 407</option>
+                        </select>
+                    </td>
+                </tr>
+            `;
+
+            // Append the new row to the table
+            document.querySelector('#crewTable tbody').insertAdjacentHTML('beforeend', newRow);
+
+            // Reset form fields
+            document.getElementById('addCrewForm').reset();
+        });
+    </script>
+
+</body>
+</html>
+
+			
+
+			
+							
+							
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+	
+
+	<script src="script.js"></script>
+</body>
+</html>
